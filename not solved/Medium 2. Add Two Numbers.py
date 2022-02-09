@@ -1,11 +1,40 @@
+# TypeError: object of type 'ListNode' has no len()
+#     if len(l1) < len(l2):
+# Line 10 in addTwoNumbers (Solution.py)
+#     ret = Solution().addTwoNumbers(param_1, param_2)
+# Line 53 in _driver (Solution.py)
+#     _driver()
+# Line 64 in <module> (Solution.py)
+
+
 class Solution:
     def addTwoNumbers(self, l1, l2):
-        abuba = l1[::-1]
-        print(abuba)
+        res = []
+        mood = 0
+        if len(l1) < len(l2):
+            l1, l2 = l2, l1
+        if len(l1) == len(l2):
+            l1 = l1[::-1]
+        for i in range(len(l1)):
+            # i = 0 - i
+            try:
+                l1[i] = l1[i] + l2[i] + mood
+            except:
+                l1[i] += mood
+            if l1[i] >= 10:
+                if i == len(l1) - 1:
+                    l1.append(mood)
+                mood = 1
+                l1[i] = l1[i] % 10
+            else:
+                mood = 0
+        return l1
 
 
-l1 = [2, 4, 3]
-l2 = [5, 6, 4]
+l1 = [9, 9, 9, 9, 9, 9, 9]
+l2 = [9, 9, 9, 9]
+#  = [8,9,9,9,0,0,0,1]
+
 
 print(Solution.addTwoNumbers(1, l1, l2))
 
