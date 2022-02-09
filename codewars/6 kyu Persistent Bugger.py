@@ -10,8 +10,8 @@ def persistence(n):
     return step
 
 
-print(persistence(4))
-assert persistence(4) == 4
+print(persistence(42))
+assert persistence(42) == 4
 
 '''
 6 kyu
