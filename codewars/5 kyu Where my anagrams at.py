@@ -14,12 +14,6 @@ def anagrams(word, words):
 print(anagrams('abba',
                ['a', 'b', 'c', 'd', 'aabb', 'bbaa', 'abab', 'baba', 'baab', 'abcd', 'abbba', 'baaab', 'abbab', 'abbaa',
                 'babaa']))
-# ['crazer', 'carer', 'racer'] non true
-# ['carer', 'racer'] true
-# ['crazer', 'carer'] non true
-
-
-# ('abba', ['a', 'b', 'c', 'd', 'aabb', 'bbaa', 'abab', 'baba', 'baab', 'abcd', 'abbba', 'baaab', 'abbab', 'abbaa', 'babaa'])
 
 
 '''
