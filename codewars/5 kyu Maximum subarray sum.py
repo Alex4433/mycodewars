@@ -1,13 +1,10 @@
 def max_sequence(arr):
     result = 0
-    max_in = 0
     for element in range(len(arr)):
         max_in = arr[element]
         for element_inner in range(element + 1, len(arr)):
             max_in += arr[element_inner]
-            if max_in > result:
-                result = max_in
-        max_in = 0
+            result = max_in if max_in > result else result
     return result
 
 
