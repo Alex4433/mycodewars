@@ -4,4 +4,7 @@ class test:
 
     @staticmethod
     def assert_equals(func, result, *args):
-        print(func == result)
+        if func == result:
+            print('#Good')
+        else:
+            print('#Bad case', func, 'should return', result)
